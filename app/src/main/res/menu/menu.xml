@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/round_menu_white_18dp"
+        app:showAsAction="always"
+        android:title="favirote">
+        <menu>
+        <item
+            android:id="@+id/itemUpdate"
+            android:title="회원정보수정"
+            />
+        <item
+            android:id="@+id/itemLogout"
+            android:title="로그아웃"
+            />
+        </menu>
+    </item>
+    <!--<item-->
+        <!--android:id="@+id/itemUpdate"-->
+        <!--android:title="회원정보수정"-->
+        <!--/>-->
+    <!--<item-->
+        <!--android:id="@+id/itemLogout"-->
+        <!--android:title="로그아웃"-->
+        <!--/>-->
+</menu>

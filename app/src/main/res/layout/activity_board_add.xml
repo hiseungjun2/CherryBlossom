@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="project.example.com.report_project.BoardAddActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainLayout"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_centerVertical="true"
+                android:text="게시글 제목 : "/>
+
+            <EditText
+                android:id="@+id/editTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/textTitle"
+                android:layout_alignParentRight="true"
+                android:hint="게시글 제목을 입력해주세요"
+                android:layout_centerVertical="true"
+                android:textSize="16dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/userImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_account_circle_black_24dp"/>
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/userImage"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="25dp"
+                android:text="이름"/>
+
+            <TextView
+                android:id="@+id/textBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:textSize="15dp"
+                android:text="생년월일"/>
+
+            <TextView
+                android:id="@+id/textProf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textName"
+                android:layout_toRightOf="@id/userImage"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="직업"/>
+
+            <TextView
+                android:id="@+id/textLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textName"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:text="지역"/>
+
+            <TextView
+                android:id="@+id/textPurp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textProf"
+                android:layout_toRightOf="@id/userImage"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:text="목적"/>
+
+        </RelativeLayout>
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:textSize="25dp"-->
+            <!--android:text="장소 검색"/>-->
+
+        <fragment
+            android:id="@+id/place_autocomplete_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment" />
+
+        <!-- Map화면 추가 -->
+        <fragment
+            android:id="@+id/mapLoc"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:name="com.google.android.gms.maps.MapFragment" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/editAppeal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="어필하고 싶은 내용을 작성해주세요"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

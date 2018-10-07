@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1018625222021",
+    "firebase_url": "https://cherryblossom-ccea5.firebaseio.com",
+    "project_id": "cherryblossom-ccea5",
+    "storage_bucket": "cherryblossom-ccea5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018625222021:android:f2df6d88a030a7f3",
+        "android_client_info": {
+          "package_name": "project.example.com.report_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018625222021-cgud04ddi5al9au788ppsaemh5dtsgcd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "project.example.com.report_project",
+            "certificate_hash": "d93021b85625fa4fd28644a29d40c1e25dedcf5c"
+          }
+        },
+        {
+          "client_id": "1018625222021-4k84jrsrkiqbahilrd5giie34avjtoda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWP9J3zpXr94vzo6QC9E2hRyAwRmSNpyw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018625222021-4k84jrsrkiqbahilrd5giie34avjtoda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

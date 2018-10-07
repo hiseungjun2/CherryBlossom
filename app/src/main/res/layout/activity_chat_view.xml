@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatViewActivity"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:divider="#ffffff"
+        android:id="@+id/chatListView"
+        android:transcriptMode="alwaysScroll"
+        android:listSelector="@android:color/transparent">
+
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:background="#ffb6c1"
+        android:id="@+id/editLayout">
+
+        <EditText
+            android:id="@+id/msgEdit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:hint="메시지 입력"
+            android:layout_toLeftOf="@+id/msgBtn"
+            android:layout_alignParentBottom="true" />
+
+        <Button
+            android:id="@+id/msgBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="전송" />
+
+    </RelativeLayout>
+
+</LinearLayout>

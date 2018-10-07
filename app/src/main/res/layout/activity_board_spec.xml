@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="project.example.com.report_project.BoardSpecActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/mainLayout"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/boardSpec_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="15dp"
+            android:layout_marginTop="5dp"
+            android:paddingRight="15dp"
+            android:layout_gravity="right"
+            android:text="작성일"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/userImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_account_circle_black_24dp"/>
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/userImage"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="25dp"
+                android:text="이름"/>
+
+            <TextView
+                android:id="@+id/textBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:textSize="15dp"
+                android:text="생년월일"/>
+
+            <TextView
+                android:id="@+id/textProf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textName"
+                android:layout_toRightOf="@id/userImage"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="직업"/>
+
+            <TextView
+                android:id="@+id/textLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textName"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:text="지역"/>
+
+            <TextView
+                android:id="@+id/textPurp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textProf"
+                android:layout_toRightOf="@id/userImage"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:text="목적"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/imgMap"
+                android:layout_centerVertical="true"
+                android:text="장소" />
+
+            <ImageView
+                android:id="@+id/imgMap"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_location_on_black_24dp" />
+
+        </RelativeLayout>
+
+        <!-- Map화면 추가 -->
+        <RelativeLayout
+            android:id="@+id/board_Viewmap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/mapLoc"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="10dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/boardSpec_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="20dp"
+            android:text="내용"
+            android:paddingBottom="50dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/border">
+
+            <ListView
+                android:id="@+id/listComment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+            </ListView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:background="#ffb6c1">
+
+        <EditText
+            android:id="@+id/editComment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:hint="댓글을 입력해주세요"
+            android:layout_toLeftOf="@id/btnComment"
+            android:layout_alignParentBottom="true"/>
+
+        <ImageView
+            android:id="@+id/btnComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/round_keyboard_return_white_24dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
